@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resourses/Pixel1.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/DialogueBox.png" type="Texture" id=2]
+[ext_resource path="res://UI/DialogueBox.gd" type="Script" id=3]
+
+[node name="DialogueBox" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 3 )
+dialogue_file = "res://Json/Level01.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 255.0
+margin_bottom = 60.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0.469971, 0.0203428, 15.2576, 15.6775 )
+patch_margin_left = 11
+patch_margin_top = 11
+patch_margin_right = 10
+patch_margin_bottom = 11
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextName" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 6.0
+margin_top = 7.0
+margin_right = 251.0
+margin_bottom = 20.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextDialogue" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 6.0
+margin_top = 20.0
+margin_right = 250.0
+margin_bottom = 56.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Text"
+__meta__ = {
+"_edit_use_anchors_": false
+}

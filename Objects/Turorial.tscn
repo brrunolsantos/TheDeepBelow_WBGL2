@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resourses/Pixel1.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resourses/Pixel2.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Objects/Turorial.gd" type="Script" id=3]
+
+[node name="Turorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 256.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 2 )
+text = "HOW TO PLAY
+"
+align = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 100.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 10.0
+custom_fonts/font = ExtResource( 1 )
+text = "W/A/S/D - Movement"
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+margin_top = 14.0
+margin_right = 200.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 1 )
+text = "Left Mouse Button - Shoot"
+
+[node name="Label3" type="Label" parent="VBoxContainer2"]
+margin_top = 28.0
+margin_right = 200.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 1 )
+text = "E - Interact"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -36.0
+margin_top = -19.0
+margin_right = 36.0
+margin_bottom = -5.0
+custom_fonts/font = ExtResource( 1 )
+text = "Have FUN!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

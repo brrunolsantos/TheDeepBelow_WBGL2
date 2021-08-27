@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resourses/DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menus/FinalScreen.gd" type="Script" id=2]
+
+[node name="FinalScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Labels" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -115.5
+margin_right = 115.5
+margin_bottom = 94.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Labels"]
+margin_right = 231.0
+margin_bottom = 31.0
+text = "You escaped the Dungeon with your father"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Level01Time" type="Label" parent="Labels"]
+margin_top = 35.0
+margin_right = 231.0
+margin_bottom = 53.0
+text = "Level 01 : "
+align = 1
+valign = 1
+
+[node name="Level02Time" type="Label" parent="Labels"]
+margin_top = 57.0
+margin_right = 231.0
+margin_bottom = 75.0
+text = "Level 02 : "
+align = 1
+valign = 1
+
+[node name="Level03Time" type="Label" parent="Labels"]
+margin_top = 79.0
+margin_right = 231.0
+margin_bottom = 97.0
+text = "Level 03 :"
+align = 1
+valign = 1
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -81.0815
+margin_right = 100.0
+margin_bottom = -13.0815
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuButton" type="Button" parent="Buttons"]
+margin_right = 200.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 120, 20 )
+text = "Main Menu"
+
+[node name="PlayAgainButton" type="Button" parent="Buttons"]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 120, 20 )
+text = "Play Again"
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 120, 20 )
+text = "Quit Game"
+[connection signal="pressed" from="Buttons/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="Buttons/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_QuitButton_pressed"]

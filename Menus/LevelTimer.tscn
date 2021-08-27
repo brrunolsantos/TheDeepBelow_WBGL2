@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/TimerLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resourses/Pixel2.tres" type="DynamicFont" id=2]
+
+[node name="LevelTimer" type="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -160.0
+margin_right = 160.0
+margin_bottom = 41.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 7.0
+margin_right = 324.0
+margin_bottom = 39.0
+color = Color( 0, 0, 0, 0.403922 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_top = 7.42462
+margin_right = 4.0
+margin_bottom = 21.4246
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer"]
+margin_right = 324.0
+margin_bottom = 28.0
+custom_fonts/font = ExtResource( 2 )
+text = "00 : 00"
+align = 1
+valign = 1
+script = ExtResource( 1 )
